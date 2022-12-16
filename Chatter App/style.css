@@ -251,13 +251,13 @@ h2{
     align-items: flex-end;
 }
 .message-wrapper.incoming{
-    width: 97%;
+    
     margin: 15px 0;
     margin-right: 50%;
     align-self: flex-start;
 }
 .message-wrapper.outgoing{
-    width: 97%;
+    
     margin: 15px 0;
     align-items: flex-end;
     align-self: flex-end;
