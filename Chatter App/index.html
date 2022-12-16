@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chatter|App</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    </head>
+    <body onload="init()">
+        
+        <img class="logo" src="https://toppng.com/uploads/preview/live-chat-logo-11549838701ncylo0na9k.png" alt="image"><h1 class="head-bar" style="display:inline-block;"> Chatter|App 
+        <a class="fab" onclick="createChannel()">+</a> </h1> 
+        <h1 class="chat-head-bar"> <small id="channelName">Friends </small> <a id="fav-btn" class="material-icons" onclick="setFavorite()">favorite</a></h1>
+        
+        <section id="channels-view">
+        
+        <h2>Favourites</h2>
+        <ul class="channel-list" id="favorite-channels" >
+            <!--<li id="channel1" onclick="switchChannel(channel1)"><i class="material-icons">group</i><strong> Family&emsp;&nbsp;</strong> 09:11</li>
+            <li id="channel2" onclick="switchChannel(channel2)"><i class="material-icons">group</i><strong>Friends</strong> Yesterday</li> -->
+        </ul>    
+        <br>
+        <h2>Regular</h2>
+        <ul class="channel-list" id="regular-channels" >
+            <!-- <li id="channel3" onclick="switchChannel(channel3)"><i class="material-icons">group</i><strong>Gaming</strong> 7th November</li>
+            <li id="channel4" onclick="switchChannel(channel4)"><i class="material-icons">group</i><strong>Coding</strong> 9th November</li> -->
+        </ul>
+        </section>
+
+        <div id="new-channel-area">
+            <div><strong>Channel Name:</strong></div>
+            <div>
+            <input type="text" 
+            id="channel-input"
+            name="channel-input"
+            minlength="1"
+            maxlength="30"
+            placeholder=".....">
+            </div>
+            <div><button id="cancel-channel-btn" onclick="cancelChannel()">Cancel</button><button id="create-channel-btn" onclick="addChannel()">Create</button></div>
+        </div>
+        
+        
+        <!--Chat Section(includes outgoing/incoming messages and input section)-->
+        <section id="chat-section">
+        <div id="message-area">
+        
+        <p id="select-channel">Select a channel to start messaging.</p>
+
+        </div>
+        
+        <!--<div class="message-outgoing">
+        <div class="message-wrapper outgoing">
+        
+            <div class="message-content">
+            <p>So, we meet-up tomorrow at Shishir's place. Everyone be there by 8 in the morning.</p>
+            </div>
+        <i class="material-icons out-icon">account_circle</i>
+        </div>
+        <span class="timestamp">12:24</span>
+        </div>
+
+        <div class="message-incoming">
+        <div class="message-wrapper incoming">
+        <i class="material-icons">account_circle</i> 
+            <div class="message-content">
+            <h3>Mokshith</h3>
+            <p>Yeah I'll be there by 7, let me know if you need me to get anything</p>
+            </div>
+        </div>
+        <span class="timestamp">&emsp;12:26</span>
+        </div>
+
+        <div class="message-incoming">
+        <div class="message-wrapper incoming">
+            <i class="material-icons">account_circle</i>
+            <div class="message-content">
+            <h3>Shishir</h3>
+            <p>Nothing as such, just come it's alright. Call up Vedant and check once if he's coming.</p>
+            </div>
+        </div>
+        <span class="timestamp">&emsp;12:30</span> 
+        </div>
+
+        </div>-->
+        
+       
+        <div id="input-area">
+            <i class="material-icons" id="emoticon-button">insert_emoticon</i>
+            <input
+              type="text"
+              id="message-input"
+              name="message-input"
+              minlength="1"
+              maxlength="500"
+              placeholder="... Write your message here ..."
+            />
+            <a class="material-icons button" id="send-button">send</a>
+          </div>
+        <div id="emoji-area">
+            <div id="emoji-header">
+                <span>Emojis</span> 
+                <a class="material-icons button" id="close-emoticon-button">cancel</a>
+            </div>
+            <div id="emoji-list"></div>
+        </div>
+
+        </section>
+    <script src="js/main.js"></script>
+    <script src="js/channels.js"></script>
+    <script src="js/messages.js"></script>
+    <script src="js/emojis.js"></script>
+    </body>
+</html>
